@@ -1,0 +1,98 @@
+{
+    "name": "Form Status Tweaks",
+
+    "description": "Specify alternative text to be used in place of the standard Incomplete/Unverified/Complete form status labels.",
+
+    "namespace": "MCRI\\FormStatusTweaks",
+
+    "authors": [
+        {
+            "name": "Luke Stevens",
+            "email": "luke.stevens@mcri.edu.au",
+            "institution": "Murdoch Children's Research Institute"
+        }
+    ],
+
+    "framework-version": 5,
+
+    "compatibility": {
+        "redcap-version-min": "9.10.0"
+    },
+
+    "permissions": [
+        "redcap_every_page_before_render"
+    ],
+
+    "enable-every-page-hooks-on-system-pages": true,
+
+    "system-settings": [
+        {
+            "name": "<span class='font-weight-bold' style='font-size:1rem;'>Note: these settings will take effect for all projects where the module is enabled. Will you enable it for all projects?</span>",
+            "key": "desc",
+            "type": "descriptive"
+        },
+        {
+            "name": "System-wide default label for \"Incomplete\" form status<br>Leave empty to use default label (i.e. \"Incomplete\").",
+            "key": "system-label-0",
+            "type": "text"
+        },
+        {
+            "name": "System-wide default label for \"Unverified\" form status<br>Leave empty to use default label (i.e. \"Unverified\").",
+            "key": "system-label-1",
+            "type": "text"
+        },
+        {
+            "name": "System-wide default label for \"Complete\" form status<br>Leave empty to use default label (i.e. \"Complete\").",
+            "key": "system-label-2",
+            "type": "text"
+        }
+    ],
+
+    "project-settings": [
+        {
+            "name": "Project-wide default label for \"Incomplete\" form status<br>Leave empty to use system-level label.",
+            "key": "project-label-0",
+            "type": "text"
+        },
+        {
+            "name": "Project-wide default label for \"Unverified\" form status<br>Leave empty to use system-level label.",
+            "key": "project-label-1",
+            "type": "text"
+        },
+        {
+            "name": "Project-wide default label for \"Complete\" form status<br>Leave empty to use system-level label.",
+            "key": "project-label-2",
+            "type": "text"
+        },
+        {
+            "key": "project-label-instrument",
+            "name": "Configure layout of launch buttons on landing page (optional)<br>Any survey form not selected here will be placed in row 1, column 1.",
+            "required": false,
+            "type": "sub_settings",
+            "repeatable": true,
+            "sub_settings": [
+                {
+                    "key": "instrument",
+                    "name": "Survey to include in this column<br>(Any non-survey form selected here will be ignored.)",
+                    "required": true,
+                    "type": "form-list"
+                },
+                {
+                    "name": "Label for \"Incomplete\" form status for the selected instrument<br>Leave empty to use project-level label.",
+                    "key": "instrument-label-0",
+                    "type": "text"
+                },
+                {
+                    "name": "Label for \"Unverified\" form status for the selected instrument<br>Leave empty to use project-level label.",
+                    "key": "instrument-label-1",
+                    "type": "text"
+                },
+                {
+                    "name": "Label for \"Complete\" form status for the selected instrument<br>Leave empty to use project-level label.",
+                    "key": "instrument-label-2",
+                    "type": "text"
+                }
+            ]
+        }
+    ]
+}

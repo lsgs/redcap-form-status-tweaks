@@ -10,12 +10,13 @@ Ever wanted to change the standard form status labels?
 - Incomplete
 - Unverified
 - Complete
-You'll have discovered you can't via a change to the language file or even via a manual database update to the form status fields' metadata.
+
+You'll have discovered you can't do this via a change to the language file or even via a manual database update to form status fields' metadata.
 
 Now you can!
 
 ### System Level Settings
-Specify alternative text to be used in place of Incomplete/Unverified/Complete for all projects where the module is enabled.
+Specify alternative text to be used in place of Incomplete/Unverified/Complete for all projects where the module is enabled. (Can be enabled for all projects.)
 
 ## Project Level Settings
 - Specify custom labels to be used in place of the system-level form status labels in the current project.

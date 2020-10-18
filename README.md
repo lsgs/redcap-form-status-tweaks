@@ -23,8 +23,11 @@ Specify alternative text to be used in place of Incomplete/Unverified/Complete f
 
 ## Example
 This example shows two forms, one showing forms status labels defined at project-level, the other for the individual form.
-- Data entry form ![form example](./imgform.png)
-- Record Home page legend ![legend example](./imglegend.png)
-- Report view ![report example](./imgreport.png)
+- Data entry form  
+![form example](./imgform.png)
+- Record Home page legend  
+![legend example](./imglegend.png)
+- Report view  
+![report example](./imgreport.png)
 
 ********************************************************************************

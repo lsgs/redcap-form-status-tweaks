@@ -43,10 +43,12 @@ class FormStatusTweaks extends AbstractExternalModule
 
                         $formSettings = $this->getSubSettings('project-label-instrument', $project_id);
                         foreach ($formSettings as $fs) {
-                                $label0instrument = $fs['instrument-label-0'] ?: $label0;
-                                $label1instrument = $fs['instrument-label-1'] ?: $label1;
-                                $label2instrument = $fs['instrument-label-2'] ?: $label2;
-                                $Proj->metadata[$fs['instrument']."_complete"]['element_enum'] = "0, $label0instrument \\n 1, $label1instrument \\n 2, $label2instrument";
+                                if (array_key_exists('instrument', $fs) && !empty($fs['instrument']) ) {
+                                        $label0instrument = $fs['instrument-label-0'] ?: $label0;
+                                        $label1instrument = $fs['instrument-label-1'] ?: $label1;
+                                        $label2instrument = $fs['instrument-label-2'] ?: $label2;
+                                        $Proj->metadata[$fs['instrument']."_complete"]['element_enum'] = "0, $label0instrument \\n 1, $label1instrument \\n 2, $label2instrument";
+                                }
                         }
                 }
 

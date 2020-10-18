@@ -27,7 +27,7 @@
 
     "system-settings": [
         {
-            "name": "<span class='font-weight-bold' style='font-size:1rem;'>Note: these settings will take effect for all projects where the module is enabled. Will you enable it for all projects?</span>",
+            "name": "<span class='font-weight-bold' style='font-size:1rem;'>Note: these settings will take effect for all projects where the module is enabled.<br>Will you enable it for all projects?</span>",
             "key": "desc",
             "type": "descriptive"
         },
@@ -66,15 +66,14 @@
         },
         {
             "key": "project-label-instrument",
-            "name": "Configure layout of launch buttons on landing page (optional)<br>Any survey form not selected here will be placed in row 1, column 1.",
+            "name": "Configure customised form status labels for specified instruments.",
             "required": false,
             "type": "sub_settings",
             "repeatable": true,
             "sub_settings": [
                 {
                     "key": "instrument",
-                    "name": "Survey to include in this column<br>(Any non-survey form selected here will be ignored.)",
-                    "required": true,
+                    "name": "Instrument for customised form status labels.",
                     "type": "form-list"
                 },
                 {
